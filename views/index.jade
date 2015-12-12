@@ -1,0 +1,44 @@
+extends layout
+
+block content
+  if upcomingElection
+    each election in elections
+      h1.text-success The #{election.name} is coming up on #{election.electionDay}! Go and vote!
+  div.tablecont
+    each i in offices
+      each n in i.officialIndices
+        div.politicalInfo.well.well-sm(class=officials[n].party)
+          div.officialInfoGroup
+            div.textInfo
+              p.role= isNaN(i.name.charAt(i.name.length-1)) === false ? i.name + " Representative" : i.name
+              p.name= officials[n].name
+              if officials[n].party
+                unless officials[n].party === "Unknown"
+                  p.party= officials[n].party.replace('tic','t')
+            if(officials[n].photoUrl)
+              div.imageInfo
+                img.polimg.img-rounded(src=officials[n].photoUrl alt="Photo not found")
+          if officials[n].address
+            div.infogroup
+              p.cHead Address
+              each address in officials[n].address
+                p.cText #{address.line1}, #{address.city.substring(0,1).toLocaleUpperCase() + address.city.substring(1)}, #{address.state}, #{address.zip}
+          if officials[n].emails
+            div.infogroup
+              p.cHead E-Mail
+              each email in officials[n].emails
+                a(href="mailto:"+email) 
+                  p.cText=email
+          if officials[n].phones
+            div.infogroup
+              p.cHead Phone
+              each phone in officials[n].phones
+                p.cText #{phone}
+          if officials[n].channels
+            div.infogroup
+              each site in officials[n].channels
+                if site.type === "Facebook"
+                  a.linkText(href="http://www.facebook.com/"+site.id) Facebook 
+                if site.type === "Twitter"
+                  a.linkText(href="http://www.twitter.com/"+site.id) Twitter 
+                  

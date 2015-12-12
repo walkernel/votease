@@ -1,0 +1,90 @@
+
+body{
+  padding: 50px;
+  background-color:#D3E9DD !important;
+
+}
+h1{
+  font-family: 'Yanone Kaffeesatz', sans-serif !important;
+  font-weight: 200;
+  text-align: center;
+}
+.linkText{
+  color: #337ab7;
+  font-size: 16px;
+  transform:scale(1,3);
+}
+.address{
+  width:50%;
+  margin:13.5% 25% 13.5% 25%;
+
+}
+.Republican{
+  background: #FBC2C6 !important;
+}
+.Democratic{
+  background: #A3ABCB !important;
+}
+.Independant{
+  background:#BA9EC9 !important;
+}
+.tablecont{
+  display:inline-flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+}
+.politicalInfo{
+  width:48% !important;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.officialInfoGroup{
+  display: inline-flex;
+  justify-content: space-between;
+  flex-direction:row;
+  flex-wrap:nowrap;
+}
+.textInfo{
+}
+.polimg{
+  max-height:100px;
+}
+.role{
+  transform:scale(1,3);
+  display: inline-block;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+}
+.name{
+  font-family:'Roboto', sans-serif;
+  font-weight: 300;
+  line-height: 50px;
+  font-size: 36px;
+
+}
+.party{
+  line-height: 25%;
+  transform:scale(1,2);
+  font-size: 12px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  padding-bottom:15px;
+}
+.cHead{
+  transform:scale(1,3);
+  display: inline-block;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 50%;
+  padding-top:5px;
+  padding-bottom: 5px;
+
+}
+.cText{
+  font-family: 'Roboto', sans-serif;
+  font-weight:300;
+  font-size: 30px;
+  padding-bottom:5px;
+}
